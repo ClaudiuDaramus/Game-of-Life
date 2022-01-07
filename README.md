@@ -1,4 +1,4 @@
-# Learnable Game Of Life (John Conway) with convolutions, in PyTorch
+# Learnable Game Of Life (John Conway) with convolutions, in PyTorch as Reinforcement Learning 
 
 Learnable cellular automata... in PyTorch, using convolutions.
 
