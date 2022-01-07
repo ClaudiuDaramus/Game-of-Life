@@ -5,6 +5,8 @@ import torch
 import torch.nn.functional as F
 from PIL import Image
 
+import pickle
+
 BOARD_HEIGHT = 100
 BOARD_WIDTH = 100
 
@@ -32,9 +34,12 @@ class GoL(torch.nn.Module):
 if __name__ == '__main__':
     gol = GoL().to(device)
 
+    # open a file, where you ant to store the data
+    # file = open('important', 'wb')
+
     criterion = torch.nn.MSELoss()
     optimizer = torch.optim.Adam(gol.parameters(), lr=0.001)
-    for epoch in range(2):
+    for epoch in range(16):
 
         running_loss = 0.0
         for i, data in enumerate(trainloader):
@@ -61,9 +66,15 @@ if __name__ == '__main__':
                 q = cv2.waitKey(100)
             last_frame = data
 
+            # dump information to that file
+            # pickle.dump(data, file)
+
     distrib = torch.distributions.Bernoulli(0.5)
     board = distrib.sample((BOARD_HEIGHT, BOARD_WIDTH)).view(1, 1, BOARD_HEIGHT, BOARD_WIDTH)
     board = board.to(torch.float32).to(device)
+
+    # close the file
+    # file.close()
 
     while True:
         board_array = np.int8(board.clone().cpu().view(BOARD_HEIGHT, BOARD_WIDTH).detach()) * 255
