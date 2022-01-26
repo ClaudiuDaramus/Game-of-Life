@@ -26,3 +26,5 @@ it creates a new file (a numpy vector). The second time it'll append to that vec
 Here's an example output:
 
 ![A learned game](https://user-images.githubusercontent.com/2245347/73218288-8e3e0c00-410e-11ea-8bdc-49eef2b91d8e.gif)
+
+# SPECIAL THANKS TO TOM GREK: https://github.com/tomgrek/gameoflife
