@@ -1,4 +1,4 @@
-[![Watch the video](https://imgur.com/a/5cbLZXv)](https://youtu.be/mjirhqMETWA)
+[![Watch the video](https://i.imgur.com/OJHhpsb.png)](https://youtu.be/mjirhqMETWA)
 
 # Learnable Game Of Life (John Conway) with convolutions, in PyTorch as Reinforcement Learning 
 
